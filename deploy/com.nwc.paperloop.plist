@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.nwc.paperloop</string>
+
+    <!-- EDIT the two paths below:
+         1) the python inside your venv  (run: which python3  after activating it)
+         2) WorkingDirectory = the folder that CONTAINS the nwc_quant/ folder -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/USERNAME/nwc/.venv/bin/python3</string>
+        <string>-m</string>
+        <string>nwc_quant.run_paper</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/USERNAME/nwc</string>
+
+    <!-- Fire on the 1st of every month at 9:00am local time -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Day</key><integer>1</integer>
+        <key>Hour</key><integer>9</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/USERNAME/nwc/paperloop.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/USERNAME/nwc/paperloop.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
